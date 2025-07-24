@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            width: 800px;
+            height: 800px;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    小明有20元, 小商店换零钱, 只有5角和1元的,请问有多少中换法 , 打印出来?
+</body>
+<script>
+    let MONEY = 20;
+    let PAY1 = 1;
+    let PAY2 = 0.5;
+    document.write('<table>')
+    for (let i = 0; i <= 20; i++) {
+        let money = MONEY;
+        let num = 0;
+        document.write('<tr>')
+        if (i > 0) {
+            for (let j = 1; j <= i; j++) {
+                money -= PAY1;
+            }
+        }
+
+
+        console.log(i);
+        while (money > 0) {
+            money -= PAY2;
+            num++;
+        }
+        console.log(num); i
+        console.log(`本次换回${i}张1元，${num}张0.5元`);
+        console.log(`当前是第${i + 1}种换法`);
+        document.write(`<td>本次换回${i}张1元，${num}张0.5元</td>`);
+        document.write(`<td>当前是第${i + 1}种换法</td>`);
+        document.write('<tr>')
+
+    }
+    document.write('<table>');
+
+
+    const rows = document.querySelectorAll('tr');
+    // 定义 mouseover 事件处理函数
+    const handleMouseOver = function () {
+        console.log('mouseover');
+        this.style.backgroundColor = 'yellow';
+    };
+    // 定义 mouseout 事件处理函数
+    const handleMouseOut = function () {
+        console.log('mouseout');
+        this.style.backgroundColor = '';
+    };
+
+    // 为每一行添加事件监听器
+    rows.forEach(row => {
+        row.addEventListener('mouseover', handleMouseOver);
+        row.addEventListener('mouseout', handleMouseOut);
+    });
+    //鼠标移到对应行换色
+    // document.querySelector('tr').removeEventListener('mouseover', function () {
+    //     console.log('mouseover');
+    //     this.style.backgroundColor = 'yellow';
+    // });
+    // document.querySelector('tr').addEventListener('mouseout', function () {
+    //     console.log('mouseout');
+    //     this.style.backgroundColor = '';
+    // });
+
+
+</script>
+
+</html>

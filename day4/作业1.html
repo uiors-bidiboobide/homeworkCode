@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    let arr1 = [11,22,33,44,55];<br>
+    需求1 : 打印数组的元素和<br>
+
+    let arr2 = [11,22,33,44,55];<br>
+    需求2 : 把数组中的偶数打印出来<br>
+
+    let arr3 = [33,22,11,55,44];<br>
+    需求3 : 打印数组中的最大值<br>
+</body>
+
+<script>
+    let arr1 = [11,22,33,44,55];
+    let sum = 0;
+    for (let index = 0; index < arr1.length; index++) {
+        sum += arr1[index];
+    }
+    console.log(sum);
+    document.write('<br>' + '需求1最终输出的值为' + sum);
+
+    let arr2 = [11,22,33,44,55];
+    for (let index = 0; index < arr2.length; index++) {
+        if (arr2[index] % 2 == 0) {
+            console.log(arr2[index]);
+            document.write('<br>' + '需求2最终输出的偶数有' + arr2[index]);
+        }
+    }
+
+    let arr3 = [33,22,11,55,44];
+    let maxNum = 0;
+    for (let index = 0; index < arr3.length; index++) {
+        if (arr3[index] > maxNum) {
+            maxNum = arr3[index];
+        }
+
+        
+    }
+    console.log(maxNum);
+    document.write('<br>' + '需求3最终输出的为' + maxNum);
+</script>
+</html>

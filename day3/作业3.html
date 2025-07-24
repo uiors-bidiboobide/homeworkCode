@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求1-100之前的偶数和</title>
+</head>
+<body>
+    求1-100之前的偶数和
+</body>
+<script>
+    let sum = 0
+    for (let index = 0; index < 100; index++) {
+        if (index % 2 == 0) {
+            sum += index
+        }
+    }
+    console.log(sum)
+    document.write('<br>1-100之前的偶数和为' + sum)
+</script>
+</html>

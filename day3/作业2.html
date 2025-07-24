@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逢七过</title>
+</head>
+<body>
+    逢七过,凡是包含7的或者是7的倍数的都需要喊"过", 其他喊正常数字, 请将1-100之间的喊话表打印到页面中
+    例如
+    1 2 3 4 5 6 过 8 9 10 11 12 13 过 15 16 过......
+    <br>
+
+    <script>
+        const NUM = 100;
+        // 方法一：通过循环判断是否包含数字7
+        function hasDigitSeven(num) {
+            num = Math.abs(num);
+            while (num > 0) {
+                const remainder = num % 10;
+                if (remainder === 7) {
+                    return true;
+                }
+                num = Math.floor(num / 10);
+            }
+            return false;
+        }
+
+        for (let index = 1; index <= NUM; index++) {
+            if (index % 7 === 0 || hasDigitSeven(index)) {
+                document.write('过 ');
+            } else {
+                document.write(index + ' ');
+            }
+
+            // 每10个数换行
+            if (index % 10 === 0) {
+                document.write('<br>');
+            }
+        }
+
+        document.write('<img src="./作业2方法1.png"><br>');
+
+        // 方法二：使用字符串判断是否包含7
+        for (let index = 1; index <= NUM; index++) {
+            if (index % 7 === 0 || index.toString().includes('7')) {
+                document.write('过 ');
+            } else {
+                document.write(index + ' ');
+            }
+
+            if (index % 10 === 0) {
+                document.write('<br>');
+            }
+        }
+
+        document.write('<img src="./作业2方法2.png" alt="">');
+    </script>
+</body>
+</html>

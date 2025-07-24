@@ -1,0 +1,81 @@
+.image-title-container {
+    display: flex;
+    /* 使用 flex 布局 */
+    align-items: center;
+    /* 垂直居中对齐 */
+    gap: 100px;
+    /* 设置标题和图片之间的间距 */
+}
+
+form {
+    text-align: center;
+}
+
+p {
+    text-align: left;
+    text-indent: 30px;
+    line-height: 30px;
+    /* 缩进30像素 行间距30像素 */
+
+}
+
+body {
+    background-color: rgb(173, 216, 230);
+}
+
+table {
+    background-color: rgb(189, 222, 213);
+}
+
+/* 外层表格样式 */
+#Yellow_Calendar {
+    border-collapse: collapse;
+    /* 合并外层表格边框 */
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    /* 给外层表格添加边框 */
+}
+
+/* 内层表格样式 */
+#Demo_Name01,
+#Demo_Name02 {
+    text-align: center;
+    width: 1000px;
+    border-collapse: collapse;
+    /* 合并内层表格边框 */
+    border: 0;
+    /* 去除内层表格边框 */
+}
+
+/* 表格单元格和表头样式 */
+#Yellow_Calendar th,
+#Yellow_Calendar td,
+#Demo_Name01 th,
+#Demo_Name01 td,
+#Demo_Name02 th,
+#Demo_Name02 td {
+    border: 1px solid #000;
+    padding: 10px;
+
+}
+
+/* 去除嵌套表格所在单元格的内边距 */
+#Yellow_Calendar td>table {
+    margin: -10px;
+    /* 抵消父单元格的内边距 */
+}
+
+#outerBox {
+    border: 1px solid black;
+    width: 1100px;
+    background-color: rgb(60, 180, 50);
+    /* 居中 */
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.cls {
+    color: rgb(205, 127, 50);
+    font-size: 20px;
+}

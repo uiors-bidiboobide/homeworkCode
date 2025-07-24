@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let student = {
+        name: '张三',
+        age: 18,
+        sex: '男',
+        hobby: ['看电影', '看小说', '看游戏'],
+        show: function () {
+            console.log(this.name + ',' + this.age + ',' + this.sex);
+        },
+        showHobby: function () {
+            console.log(this.hobby);
+        }
+    };
+
+    // 将对象转换成json字符串
+    let studentJsonChange = JSON.stringify(student);
+    console.log(studentJsonChange);
+
+
+    //创建一个json对象
+    let studentJson = `{
+        "name": "张三",
+        "age": 18,
+        "sex": "男",
+        "hobby": ["看电影", "看小说", "看游戏"]
+        
+    }`;
+
+    //将json对象转为对象
+
+    let studentObj = JSON.parse(studentJson);
+    console.log(studentObj);
+    console.log(studentObj.name);
+    console.log(studentObj.age);
+    console.log(studentObj.sex);
+    console.log(studentObj.hobby);
+
+    window.alert("兰博:警告!警告!警告!");
+    let question = confirm("炼金:摇,还是不摇,这是一个问题");
+    setInterval(function () {
+        while(!question)
+        question = confirm("炼金:摇,还是不摇,这是一个问题");
+
+        
+    }, 1000);
+</script>
+</html>
